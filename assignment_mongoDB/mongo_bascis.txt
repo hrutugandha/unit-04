@@ -1,0 +1,28 @@
+//command for creating a database
+>>use assignment
+
+//command for displaying database 
+>>show dbs
+
+// command for creating a new collection inside db
+>>db.createCollection("user")
+
+//command for inserting documant inside a collection
+>>db.users.insert({{"_id":{"$oid":"6226270e2c316ee9845a949c"},
+"first_name":"kakashi","last_name":"Hatake",
+"email":"kakashiHanae@gmail.com",
+"gender":"male","ip_address":"84930948",
+"age":29})
+
+//command fordisplaying documents in collection 
+>> db.users.find({})
+
+//command forinserting multiple docs
+>> db.users.insert([{"_id":{"$oid":"6226297b2c316ee9845a949f"},"first_name":"gintoki",
+"last_name":"sakata",
+"email":"sakataLove@gmail.com",
+"gender":"male","ip_address":"23084775",
+"age":29}])
+
+//command for removing 
+db.users.remove({"first_name":"hidan"})
